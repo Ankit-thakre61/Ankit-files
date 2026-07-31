@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend's Day - Vidya ( Chhutkuu 😻 )</title>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Dynamic Background Elements -->
+    <div class="sky-background">
+        <div class="glowing-orb orb-1"></div>
+        <div class="glowing-orb orb-2"></div>
+        <div class="glowing-orb orb-3"></div>
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+    </div>
+
+    <!-- Global Floating Particles Container -->
+    <div id="particle-container"></div>
+
+    <!-- Celebration Canvas Overlay (Fireworks, Confetti, Rose Petals) -->
+    <canvas id="celebration-canvas"></canvas>
+
+    <!-- Music Control Float -->
+    <div class="music-control" id="music-btn" title="Toggle Music">
+        <div class="music-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            </svg>
+        </div>
+        <div class="music-waves">
+            <span></span><span></span><span></span>
+        </div>
+        <audio id="bg-music" loop preload="auto">
+            <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-memories-142.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- MAIN INTERACTIVE CONTAINER -->
+    <main class="story-container">
+
+        <!-- HOME PAGE -->
+        <section class="page-section active" id="home">
+            <div class="glass-card main-hero">
+                <div class="balloon-wrapper">
+                    <!-- CSS Animated Balloons -->
+                    <div class="balloon balloon-left">🎈</div>
+                    <div class="balloon balloon-right">🎈</div>
+                </div>
+                <div class="sparkle-spark">✨</div>
+                <h1 class="animate-title">Happy Girlfriend's Day 💖</h1>
+                <p class="subtitle">For the cutest girl in my life</p>
+                <div class="name-badge">Vidya ( Chhutkuu 😻 )</div>
+                <button class="btn btn-primary" id="start-story-btn">
+                    <span>Start our little story ❤️</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- PAGE 2: STORY CARDS -->
+        <section class="page-section" id="story">
+            <h2 class="section-title">Our Little Story 🌸</h2>
+            <div class="story-grid">
+                <div class="glass-card story-card scroll-reveal">
+                    <div class="card-icon">🧸</div>
+                    <p>Every day with you feels special.</p>
+                </div>
+                <div class="glass-card story-card scroll-reveal">
+                    <div class="card-icon">🌹</div>
+                    <p>You always make me smile.</p>
+                </div>
+                <div class="glass-card story-card scroll-reveal">
+                    <div class="card-icon">🎁</div>
+                    <p>Thank you for coming into my life.</p>
+                </div>
+                <div class="glass-card story-card scroll-reveal">
+                    <div class="card-icon">🎀</div>
+                    <p>I feel lucky to have you.</p>
+                </div>
+                <div class="glass-card story-card scroll-reveal">
+                    <div class="card-icon">💖</div>
+                    <p>I never want to lose you.</p>
+                </div>
+            </div>
+            <button class="btn btn-next" data-next="memories">Continue our memory lane 🎶</button>
+        </section>
+
+        <!-- PAGE 3: MEMORIES -->
+        <section class="page-section" id="memories">
+            <h2 class="section-title">Beautiful Memories 🎞️</h2>
+            <p class="section-subtitle">Click on each card to open a precious visual chapter</p>
+            <div class="memory-grid">
+                <!-- Card 1 -->
+                <div class="memory-card" data-memory="chat">
+                    <div class="memory-card-inner">
+                        <div class="memory-front glass-card">
+                            <span class="mem-icon">🌸</span>
+                            <h3>Our First Chat</h3>
+                        </div>
+                        <div class="memory-back glass-card">
+                            <p>Sparkles of joy ignited! Every word felt like a sweet heartbeat when our journey first crossed pathways.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="memory-card" data-memory="moment">
+                    <div class="memory-card-inner">
+                        <div class="memory-front glass-card">
+                            <span class="mem-icon">☕</span>
+                            <h3>Our Favorite Moment</h3>
+                        </div>
+                        <div class="memory-back glass-card">
+                            <p>Warm cozy giggles, steaming cups, and looking into your magical eyes where time stood completely still.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="memory-card" data-memory="song">
+                    <div class="memory-card-inner">
+                        <div class="memory-front glass-card">
+                            <span class="mem-icon">🎶</span>
+                            <h3>Our Song</h3>
+                        </div>
+                        <div class="memory-back glass-card">
+                            <p>A gentle melody that plays on a loop in my mind whenever your sweet smile dances in my thoughts.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="memory-card" data-memory="smile">
+                    <div class="memory-card-inner">
+                        <div class="memory-front glass-card">
+                            <span class="mem-icon">💌</span>
+                            <h3>My Favourite Smile</h3>
+                        </div>
+                        <div class="memory-back glass-card">
+                            <p>That beautiful wrinkly nose smile of yours that cures all of my stress instantly. It's my home.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="memory-card" data-memory="sweet">
+                    <div class="memory-card-inner">
+                        <div class="memory-front glass-card">
+                            <span class="mem-icon">🍫</span>
+                            <h3>Sweet Memories</h3>
+                        </div>
+                        <div class="memory-back glass-card">
+                            <p>Wrapped in unconditional warmth and shared laughter, like sweet chocolates melting on a perfect rainy afternoon.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="memory-card" data-memory="forever">
+                    <div class="memory-card-inner">
+                        <div class="memory-front glass-card">
+                            <span class="mem-icon">💕</span>
+                            <h3>Forever Together</h3>
+                        </div>
+                        <div class="memory-back glass-card">
+                            <p>Bound by destiny, hand-in-hand, written in the glowing stars. Ready to conquer eternity side by side.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-next" data-next="reasons">Discover why I love you ✨</button>
+        </section>
+
+        <!-- PAGE 4: LOVE REASONS -->
+        <section class="page-section" id="reasons">
+            <h2 class="section-title">Reasons Why You're My Everything 💕</h2>
+            <div class="reasons-grid">
+                <div class="reason-card glass-card scroll-reveal">
+                    <span class="reason-num">01</span>
+                    <h3>Because you care.</h3>
+                    <p>You notice the smallest details and wrap me in comforting tenderness when I need it most.</p>
+                </div>
+                <div class="reason-card glass-card scroll-reveal">
+                    <span class="reason-num">02</span>
+                    <h3>Because your smile heals everything.</h3>
+                    <p>No matter how heavy my day feels, one spark of your laughter makes everything light again.</p>
+                </div>
+                <div class="reason-card glass-card scroll-reveal">
+                    <span class="reason-num">03</span>
+                    <h3>Because you make ordinary days beautiful.</h3>
+                    <p>Even lazy conversations feel like magical adventures when I have you beside me.</p>
+                </div>
+                <div class="reason-card glass-card scroll-reveal">
+                    <span class="reason-num">04</span>
+                    <h3>Because you understand me.</h3>
+                    <p>You read my silence and look straight into my soul with unwavering support and kindness.</p>
+                </div>
+                <div class="reason-card glass-card scroll-reveal">
+                    <span class="reason-num">05</span>
+                    <h3>Because you are my peace.</h3>
+                    <p>In this chaotic universe, you're the quiet haven where my heart can finally rest safely.</p>
+                </div>
+                <div class="reason-card glass-card scroll-reveal">
+                    <span class="reason-num">06</span>
+                    <h3>Because you're my favorite person.</h3>
+                    <p>Simply being in your orbit is the greatest blessing. I choose you over and over again.</p>
+                </div>
+            </div>
+            <button class="btn btn-next" data-next="scratch">Reveal some secret notes 💌</button>
+        </section>
+
+        <!-- PAGE 5: SCRATCH CARDS -->
+        <section class="page-section" id="scratch">
+            <h2 class="section-title">Scratch Your Secret Notes 🪄</h2>
+            <p class="section-subtitle">Gently scratch each card with your finger or cursor to unlock a sweet surprise!</p>
+            <div class="scratch-grid">
+                <!-- Scratch 1 -->
+                <div class="scratch-card-container glass-card">
+                    <div class="scratch-content">You're adorable ❤️</div>
+                    <canvas class="scratch-canvas" data-message="You're adorable ❤️"></canvas>
+                </div>
+                <!-- Scratch 2 -->
+                <div class="scratch-card-container glass-card">
+                    <div class="scratch-content">I miss you 🥺</div>
+                    <canvas class="scratch-canvas" data-message="I miss you 🥺"></canvas>
+                </div>
+                <!-- Scratch 3 -->
+                <div class="scratch-card-container glass-card">
+                    <div class="scratch-content">You're my safe place 💕</div>
+                    <canvas class="scratch-canvas" data-message="You're my safe place 💕"></canvas>
+                </div>
+                <!-- Scratch 4 -->
+                <div class="scratch-card-container glass-card">
+                    <div class="scratch-content">Forever us 🌸</div>
+                    <canvas class="scratch-canvas" data-message="Forever us 🌸"></canvas>
+                </div>
+                <!-- Scratch 5 -->
+                <div class="scratch-card-container glass-card">
+                    <div class="scratch-content">You complete me 💖</div>
+                    <canvas class="scratch-canvas" data-message="You complete me 💖"></canvas>
+                </div>
+                <!-- Scratch 6 -->
+                <div class="scratch-card-container glass-card">
+                    <div class="scratch-content">Always yours 😚</div>
+                    <canvas class="scratch-canvas" data-message="Always yours 😚"></canvas>
+                </div>
+            </div>
+            <button class="btn btn-next" data-next="quiz">Let's play a cute quiz! 🧠</button>
+        </section>
+
+        <!-- PAGE 6: CUTE LOVE QUIZ -->
+        <section class="page-section" id="quiz">
+            <h2 class="section-title">The Sweetness Test 🥰</h2>
+            <div class="quiz-container glass-card">
+                <!-- Question 1 -->
+                <div class="quiz-step active" id="q1">
+                    <h3>Question 1: Who is the absolute cutest?</h3>
+                    <div class="quiz-options">
+                        <button class="btn option-btn wrong-opt">Me</button>
+                        <button class="btn option-btn correct-opt" data-target="q1">Vidya 😻</button>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="quiz-step" id="q2">
+                    <h3>Question 2: Who loves whom more?</h3>
+                    <div class="quiz-options">
+                        <button class="btn option-btn correct-opt" data-target="q2">Both infinitely ❤️</button>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-status" id="quiz-msg"></div>
+            <button class="btn btn-next hidden" id="quiz-next-btn" data-next="countdown">Let's see our timeline 🕰️</button>
+        </section>
+
+        <!-- PAGE 7: COUNTDOWN -->
+        <section class="page-section" id="countdown">
+            <h2 class="section-title">Every Moment Counts ⏳</h2>
+            <div class="glass-card count-container">
+                <div class="live-date-header" id="current-date">Today's Date</div>
+                <div class="timer-display">
+                    <span id="timer-live">Calculating precious moments...</span>
+                </div>
+                <p class="timeline-text">Another beautiful day with<br><strong class="highlight">Vidya ( Chhutkuu 😻 )</strong></p>
+                <div class="pulsing-heart-inline">💖</div>
+            </div>
+            <button class="btn btn-next" data-next="special-heart">Enter our crystal temple ✨</button>
+        </section>
+
+        <!-- PAGE 8: SPECIAL SECTION (CRYSTAL HEART) -->
+        <section class="page-section" id="special-heart">
+            <div class="crystal-sanctuary">
+                <div class="crystal-heart-wrapper">
+                    <!-- Glass crystal beating heart -->
+                    <div class="crystal-heart animate-heart">
+                        <svg viewBox="0 0 100 100" class="heart-svg">
+                            <path d="M50 88.3L15.3 53.6C5.4 43.7 5.4 27.7 15.3 17.8c9.9-9.9 25.9-9.9 35.8 0L50 19l-1.1-1.2c9.9-9.9 25.9-9.9 35.8 0 9.9 9.9 9.9 25.9 0 35.8L50 88.3z" fill="url(#crystalGrad)" filter="url(#glow)"/>
+                            <defs>
+                                <linearGradient id="crystalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffb6c1" stop-opacity="0.9" />
+                                    <stop offset="50%" stop-color="#e0b0ff" stop-opacity="0.85" />
+                                    <stop offset="100%" stop-color="#dda0dd" stop-opacity="0.9" />
+                                </linearGradient>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <div class="crystal-text">
+                            <div class="c-heart">❤️</div>
+                            <div class="c-name">ANKIT</div>
+                            <div class="c-symbol">∞</div>
+                            <div class="c-name">VIDYA</div>
+                            <div class="c-heart">❤️</div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="crystal-title">Made For Each Other ✨</h3>
+                <p class="crystal-subtitle">Weaved inside stellar stars and bound together by time.</p>
+                <button class="btn btn-primary" id="final-gate-btn" data-next="final">Open my final promise 💖</button>
+            </div>
+        </section>
+
+        <!-- PAGE 9: FINAL PAGE -->
+        <section class="page-section" id="final">
+            <div class="glass-card final-card">
+                <div class="beating-final-heart">💝</div>
+                
+                <h2 class="recipient-name">Vidya ( Chhutkuu 😻 )</h2>
+                
+                <div class="final-letter">
+                    <p>Thank you for making my life so beautiful.</p>
+                    <p class="highlight">Happy Girlfriend's Day ❤️</p>
+                    <div class="promises">
+                        <div class="promise-item">🤝 I promise to always care for you.</div>
+                        <div class="promise-item">😊 I promise to always make you smile.</div>
+                        <div class="promise-item">🧗 I promise to always stand beside you.</div>
+                    </div>
+                </div>
+
+                <div class="glowing-declaration">
+                    <h1 class="glow-text">LOVE YOU BACHCHAA 😚😻</h1>
+                    <p class="forever-tag">Forever Yours ❤️</p>
+                </div>
+
+                <div class="signature-container">
+                    <svg viewBox="0 0 300 100" class="signature-svg">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="signature-text">— Ankit ❤️</text>
+                    </svg>
+                </div>
+
+                <button class="btn btn-secondary" id="replay-btn">Replay Our Story 🔄</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
